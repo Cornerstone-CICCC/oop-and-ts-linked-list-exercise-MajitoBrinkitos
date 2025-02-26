@@ -4,9 +4,19 @@
 
 const SLL = require('../lib/SLL');
 
-function findMiddle(list) {
-  // your code here
+    //Finding Middle Node
+function findMiddle() {
+  let slow = this.head;
+  let fast = this.head;
+
+  while(fast !== null && fast.next !== null){
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  return  slow ? slow.data : null;
 }
+
 
 const list = new SLL();
 list.insertAtBack(1);
